@@ -5,18 +5,9 @@
 
 # Add all changes to the staging area
 git add .
-
-# Prompt for a commit message
-read -p "Enter commit message: " commit_message
-
-# Commit the changes with the provided message
-if [ -z "$commit_message" ]; then
-  echo "Commit message cannot be empty. Aborting commit."
-  exit 1
-fi
-git commit -m "$commit_message"
+git commit -m "Automated commit"
 
 # Push the changes to the remote repository (e.g., 'origin' and 'main' branch)
-git push origin main
+git push -u origin master
 
 echo "Git push completed."
